@@ -1,1 +1,1 @@
-# movie-recom
+# movie-rec
