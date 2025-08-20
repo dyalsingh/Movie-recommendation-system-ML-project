@@ -5,8 +5,8 @@ import requests
 # Function to fetch movie poster using TMDB movie ID
 def fetch_poster(movie_id):
     try:
-        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=48dbfa77008c976c9a4e274163e7592d&language=en-US"
-        response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=48dbfa77008c976c9a4e274163e7592d&language=en-US")
+        url = f"https://api.themoviedb.org/3/movie/{movie_id}?api_key"
+        response = requests.get(f"https://api.themoviedb.org/3/movie/{movie_id}?api_key=")
         data = response.json()
 
         poster_path = data.get('poster_path')
@@ -51,4 +51,5 @@ if st.button('Show Recommendation'):
         with cols[i]:
             st.text(recommended_movie_names[i])
             st.image(recommended_movie_posters[i])
+
 
